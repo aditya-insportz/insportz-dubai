@@ -1,5 +1,5 @@
 import Navbar from "../../components/Navbar";
-import styles from "./style.module.scss";
+// import styles from "./style.module.scss";
 
 function Home() {
   return (
