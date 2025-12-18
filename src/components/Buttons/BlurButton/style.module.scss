@@ -1,0 +1,32 @@
+.blur__button {
+  width: fit-content;
+  background: linear-gradient(
+    93.74deg,
+    rgba(255, 255, 255, 0.24) 7.58%,
+    rgba(255, 255, 255, 0.12) 95.55%
+  );
+  border-radius: 100px;
+  text-decoration: none;
+  box-shadow: 0px 0px 6px 0px #ffffff40;
+  backdrop-filter: blur(30px);
+  border: 1px solid white;
+
+  span {
+    font-family: "Open Sauce Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .blur__button {
+    padding: 17px 24px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+}

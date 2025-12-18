@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Sequel100Black";
+  src: url("/fonts/Sequel100Black-45.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("/fonts/OpenSauceSans-Bold.ttf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("/fonts/OpenSauceSans-SemiBold.ttf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("/fonts/OpenSauceSans-Regular.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sauce Sans", "Sequel100Black", system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+}
