@@ -1,0 +1,217 @@
+.ongoing__leagues {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.leagues__container {
+  background-color: #f98613;
+}
+
+.ongoing__leagues__wrapper {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-family: "Open Sauce Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1e1e1e;
+  text-align: center;
+  width: 50%;
+}
+
+.mobile__slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.desktop__grid {
+  display: none;
+}
+
+.nav__btn {
+  background: linear-gradient(
+    25.63deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.536) 83.79%
+  );
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.league__image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.league__image__desktop {
+  width: 228px;
+  height: 228px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.leagues__details__container {
+  width: 100%;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tri__series {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .image__wrapper1,
+  .image__wrapper2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  .image__wrapper2 img:first-child {
+    display: none;
+  }
+}
+
+.division__league {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+
+  .image__wrapper {
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+}
+
+.franchise__league {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .image__wrapper {
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ongoing__leagues {
+    gap: 64px;
+  }
+
+  .ongoing__leagues__wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 55px 96px;
+  }
+
+  .title {
+    width: 100%;
+    font-size: 56px;
+  }
+
+  .mobile__slider {
+    display: none;
+  }
+
+  .desktop__grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leagues__details__container {
+    padding: 0 96px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    gap: 64px;
+  }
+
+  .tri__series {
+    flex-direction: row;
+    gap: 20px;
+
+    .image__wrapper1 {
+      display: none;
+    }
+
+    .image__wrapper2 {
+      width: 100%;
+      img {
+        border-radius: 40px;
+      }
+    }
+
+    .image__wrapper2 img:first-child {
+      display: inline;
+    }
+  }
+
+  .division__league {
+    flex-direction: row;
+
+    .image__wrapper {
+      img {
+        border-radius: 40px;
+      }
+    }
+  }
+
+  .franchise__league {
+    flex-direction: row;
+
+    .image__wrapper {
+      img {
+        border-radius: 40px;
+      }
+    }
+  }
+}

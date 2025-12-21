@@ -57,10 +57,13 @@
     }
   }
 
+  .gallery__main {
+    position: relative;
+  }
+
   .gallery__container {
     width: 100%;
     overflow: hidden;
-    position: relative;
 
     .nav__left,
     .nav__right {
@@ -79,11 +82,11 @@
     }
 
     .nav__left {
-      left: 0;
+      left: -24px;
     }
 
     .nav__right {
-      right: 0;
+      right: -24px;
     }
   }
 

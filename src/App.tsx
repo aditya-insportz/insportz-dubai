@@ -7,6 +7,7 @@ import Volleyball from "./pages/Volleyball";
 import Football from "./pages/football";
 import TableTennis from "./pages/TableTennis";
 import Facilty from "./pages/Facility";
+import LeaguesAndTournaments from "./pages/LeaguesAndTournaments";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         <Route path="/volleyball" element={<Volleyball />} />
         <Route path="/football" element={<Football />} />
         <Route path="/table-tennis" element={<TableTennis />} />
+        <Route
+          path="/leagues-and-tournaments"
+          element={<LeaguesAndTournaments />}
+        />
       </Routes>
     </Router>
   );
