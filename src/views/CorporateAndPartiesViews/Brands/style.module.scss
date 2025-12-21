@@ -1,0 +1,140 @@
+.brands {
+  width: 100%;
+}
+
+.brands__container {
+  background-color: #f98613;
+
+  .heading {
+    padding: 0 20px;
+    h2 {
+      font-family: "Open Sauce Sans", sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #1e1e1e;
+      padding-top: 28px;
+    }
+  }
+}
+
+.mobile__wrapper {
+  padding: 28px 20px;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.brand__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+}
+
+.brands__wrapper {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .brands__container {
+    padding: 0 96px;
+
+    .heading {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 96px;
+      padding-top: 16px;
+      h2 {
+        font-size: 56px;
+      }
+    }
+  }
+
+  .mobile__wrapper {
+    display: none;
+  }
+
+  .brands__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    width: 100%;
+    max-width: 1440px;
+    padding: 32px 96px 40px;
+    margin: 0 auto;
+  }
+
+  .nav__btn {
+    background: linear-gradient(
+      25.63deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.536) 83.79%
+    );
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+
+    &:hover:not(:disabled) {
+      background: #f0f0f0;
+    }
+
+    &.nav__btn--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .scroller {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .slider__track {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 200%; /* 8 items × 25% = 200% */
+  }
+
+  .brand__item__desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: calc(100% / 8); /* Each item takes 1/8 of track width */
+
+    img {
+      width: 228px;
+      height: 228px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}

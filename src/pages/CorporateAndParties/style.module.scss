@@ -1,0 +1,14 @@
+.facilty__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .facilty__wrapper {
+    gap: 64px;
+    padding-bottom: 64px;
+  }
+}

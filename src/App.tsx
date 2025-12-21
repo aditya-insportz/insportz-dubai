@@ -9,6 +9,7 @@ import TableTennis from "./pages/TableTennis";
 import Facilty from "./pages/Facility";
 import LeaguesAndTournaments from "./pages/LeaguesAndTournaments";
 import TrainingAndCoaching from "./pages/TrainingAndCoaching";
+import CorporateAndParties from "./pages/CorporateAndParties";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <Route
           path="/training-and-coaching"
           element={<TrainingAndCoaching />}
+        />
+        <Route
+          path="/corporate-and-parties"
+          element={<CorporateAndParties />}
         />
       </Routes>
     </Router>
