@@ -1,1 +1,14 @@
-// Home page styles
+// Mobile first styles
+.home__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 70px;
+}
+
+// Desktop styles
+@media (min-width: 768px) {
+  .home__wrapper {
+    gap: 64px;
+  }
+}
