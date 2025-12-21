@@ -29,16 +29,23 @@ const InfoBox = ({ title, listItems, content, btn1, btn2 }: InfoBoxProps) => {
           ))}
         </ul>
       )}
-      {content && <p>{content}</p>}
-      {btn1?.text && btn2?.text && (
+      {content && (
+        <div 
+          className={styles["content"]} 
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
+      {(btn1?.text || btn2?.text) && (
         <div className={styles["info__cta"]}>
-          <DarkButton text={btn1.text} link={btn1.link} />
-          <BlurButton
-            text={btn2.text}
-            link={btn2.link}
-            color={btn2.color}
-            padding={btn2.padding}
-          />
+          {btn1?.text && <DarkButton text={btn1.text} link={btn1.link} />}
+          {btn2?.text && (
+            <BlurButton
+              text={btn2.text}
+              link={btn2.link}
+              color={btn2.color}
+              padding={btn2.padding}
+            />
+          )}
         </div>
       )}
     </article>

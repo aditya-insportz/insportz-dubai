@@ -1,0 +1,37 @@
+.summer__camp {
+  width: 100%;
+}
+
+.summer__camp__container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .summer__camp__img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .summer__camp__container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 96px;
+    margin: 0 auto;
+    flex-direction: row;
+    gap: 20px;
+
+    .summer__camp__img {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
