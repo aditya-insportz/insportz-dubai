@@ -6,6 +6,7 @@ import Chevron from "assets/icons/chevron-down.png";
 import ChevronWhite from "assets/icons/chevron-down-white.png";
 import styles from "./style.module.scss";
 import Arrow from "assets/icons/arrow.svg";
+import { BOOK_NOW_LINK } from "@/utils/constants";
 
 const NAVBAR_ITEMS = [
   {
@@ -89,10 +90,10 @@ function Navbar() {
               <li key={item.label} className={styles["nav__item"]}>
                 {item.subItems ? (
                   <div className={styles["dropdown"]}>
-                    <span className={styles["nav__link"]}>
+                    <Link to={item.link} className={styles["nav__link"]}>
                       {item.label}
                       <img src={Chevron} alt="" className={styles["chevron"]} />
-                    </span>
+                    </Link>
                     <ul className={styles["dropdown__menu"]}>
                       {item.subItems.map((subItem) => (
                         <li
@@ -117,12 +118,12 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <Link to="/book-now" className={styles["book__now__btn"]}>
+          <a href={BOOK_NOW_LINK} className={styles["book__now__btn"]} target="_blank" rel="noopener noreferrer">
             <span>Book Now</span>
             <div>
               <img src={Arrow} alt="arrow" />
             </div>
-          </Link>
+          </a>
         </div>
       </nav>
     );
@@ -152,71 +153,81 @@ function Navbar() {
 
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             className={styles["mobile__menu"]}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
           >
-            <motion.div 
+            <motion.div
               className={styles["mobile__menu__content"]}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ delay: 0.1, duration: 0.2 }}
             >
-            {NAVBAR_ITEMS.map((item) => (
-              <div key={item.label} className={styles["mobile__nav__item"]}>
-                {item.subItems ? (
-                  <>
-                    <button
+              {NAVBAR_ITEMS.map((item) => (
+                <div key={item.label} className={styles["mobile__nav__item"]}>
+                  {item.subItems ? (
+                    <>
+                      <div className={styles["mobile__nav__item__wrapper"]}>
+                        <Link
+                          to={item.link}
+                          className={styles["mobile__nav__link"]}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                        <button
+                          className={styles["mobile__chevron__button"]}
+                          onClick={() => setExpandedFacility(!expandedFacility)}
+                        >
+                          <img
+                            src={ChevronWhite}
+                            alt=""
+                            className={styles["mobile__chevron"]}
+                          />
+                        </button>
+                      </div>
+                      {expandedFacility && (
+                        <div className={styles["mobile__submenu"]}>
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              to={subItem.link}
+                              className={styles["mobile__submenu__link"]}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.link}
                       className={styles["mobile__nav__link"]}
-                      onClick={() => setExpandedFacility(!expandedFacility)}
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
-                      <img
-                        src={ChevronWhite}
-                        alt=""
-                        className={styles["mobile__chevron"]}
-                      />
-                    </button>
-                    {expandedFacility && (
-                      <div className={styles["mobile__submenu"]}>
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.label}
-                            to={subItem.link}
-                            className={styles["mobile__submenu__link"]}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    to={item.link}
-                    className={styles["mobile__nav__link"]}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
-            <Link
-              to="/book-now"
-              className={styles["book__now__btn"]}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <span>Book Now</span>
-              <div>
-                <img src={Arrow} alt="arrow" />
-              </div>
-            </Link>
+                    </Link>
+                  )}
+                </div>
+              ))}
+              <a
+                href={BOOK_NOW_LINK}
+                className={styles["book__now__btn"]}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Book Now</span>
+                <div>
+                  <img src={Arrow} alt="arrow" />
+                </div>
+              </a>
             </motion.div>
           </motion.div>
         )}

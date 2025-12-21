@@ -33,6 +33,15 @@
     }
   }
 
+  p {
+    font-family: "Open Sauce Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #202020;
+  }
+
   .info__cta {
     display: flex;
     flex-direction: column;
@@ -56,6 +65,10 @@
       li {
         font-size: 24px;
       }
+    }
+
+    p {
+      font-size: 24px;
     }
 
     .info__cta {

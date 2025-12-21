@@ -220,6 +220,14 @@
   }
 }
 
+.mobile__nav__item__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
 .mobile__nav__link {
   font-family: "Sequel100Black", sans-serif;
   font-size: 18px;
@@ -229,11 +237,18 @@
   border: none;
   background: none;
   text-align: right;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   cursor: pointer;
-  gap: 10px;
+  flex: 1;
+  text-align: right;
+}
+
+.mobile__chevron__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
 }
 
 .mobile__chevron {

@@ -8,10 +8,12 @@ interface HeroSectionProps {
   btn1: {
     text: string;
     link: string;
+    target?: string;
   };
   btn2: {
     text: string;
     link: string;
+    target?: string;
   };
   bgLg: string;
   bgSm: string;
@@ -38,8 +40,8 @@ const HeroSection = ({
           <p>{description}</p>
         </div>
         <div className={styles["hero__cta"]}>
-          <LightButton text={btn1.text} link={btn1.link} />
-          <BlurButton text={btn2.text} link={btn2.link} />
+          <LightButton text={btn1.text} link={btn1.link} target={btn1.target} />
+          <BlurButton text={btn2.text} link={btn2.link} target={btn2.target} />
         </div>
       </div>
     </div>

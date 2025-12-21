@@ -5,6 +5,7 @@ interface BlurButtonProps {
   link: string;
   color?: string;
   padding?: string;
+  target?: string;
 }
 
 const BlurButton = ({
@@ -12,9 +13,10 @@ const BlurButton = ({
   link,
   color = "#ffffff",
   padding = "12px 18px",
+  target = "_self",
 }: BlurButtonProps) => {
   return (
-    <a href={link} className={styles["blur__button"]} style={{ padding }}>
+    <a href={link} className={styles["blur__button"]} style={{ padding }} target={target}>
       <span style={{ color }}>{text}</span>
     </a>
   );
