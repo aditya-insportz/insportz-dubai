@@ -1,6 +1,7 @@
 import DarkButton from "@/components/Buttons/DarkButton";
 import DubaiImage from "@/assets/images/indoor-cricket/indoor-cricket-dubai-1.png";
 import styles from "./style.module.scss";
+import { BOOK_NOW_LINK } from "@/utils/constants";
 
 const IndoorCricketDubai = () => {
   return (
@@ -14,7 +15,7 @@ const IndoorCricketDubai = () => {
               world-class pitches have hosted thousands of matches, from casual
               games to international tournaments.
             </p>
-            <DarkButton text="Book Now" link="" />
+            <DarkButton text="Book Now" link={BOOK_NOW_LINK} target="_blank" />
           </div>
           <div className={styles["image__wrapper"]}>
             <img src={DubaiImage} alt="Indoor Cricket Dubai" />

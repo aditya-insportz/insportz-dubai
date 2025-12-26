@@ -16,6 +16,7 @@ import BD2 from "assets/images/badminton/bd-2.png";
 import BD3 from "assets/images/badminton/bd-3.png";
 import BD4 from "assets/images/badminton/bd-4.png";
 import BD5 from "assets/images/badminton/bd-5.png";
+import { BOOK_NOW_LINK, WHATSAPP_LINK, APP_ROUTES } from "@/utils/constants";
 
 const HERO_DATA = {
   title: "Badminton Courts in Dubai | Insportz Club",
@@ -23,11 +24,12 @@ const HERO_DATA = {
     "Play badminton in Dubai at Insportz. High-quality indoor courts, coaching for all levels, and hourly court bookings available.",
   btn1: {
     text: "Book Now",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Explore More",
-    link: "/book-now",
+    link: APP_ROUTES.CONTACT_US,
   },
   bgLg: HeroBgLg,
   bgSm: HeroBgSm,
@@ -40,7 +42,8 @@ const INFO_SECTION_DATA = {
   img1: BD1,
   img2: BD2,
   img3: BD3,
-  link: "/book-now",
+  link: BOOK_NOW_LINK,
+  target: "_blank",
 };
 
 const INFO_BOX_1 = {
@@ -60,13 +63,14 @@ const INFO_BOX_2 = {
   ],
   btn1: {
     text: "Book a Court",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Enroll for Coaching",
-    link: "/book-now",
+    link: WHATSAPP_LINK,
+    target: "_blank",
     color: "#000000",
-    // padding: "12px 32px",
   },
 };
 

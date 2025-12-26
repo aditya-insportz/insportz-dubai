@@ -14,6 +14,7 @@ import icGallery3 from "assets/images/indoor-cricket/ic-gallery-3.png";
 import icGallery4 from "assets/images/indoor-cricket/ic-gallery-4.png";
 import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
+import { APP_ROUTES, BOOK_NOW_LINK, WHATSAPP_LINK } from "@/utils/constants";
 
 const HERO_DATA = {
   title: "Cricket Dubai | Play at Insportz Club",
@@ -21,11 +22,12 @@ const HERO_DATA = {
     "Play at the home of indoor cricket in Dubai! Book games, join leagues, or host corporate tournaments at Insportz Dubai.",
   btn1: {
     text: "Book Now",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Explore More",
-    link: "/book-now",
+    link: APP_ROUTES.CONTACT_US,
   },
   bgLg: HeroBgLg,
   bgSm: HeroBgSm,
@@ -58,11 +60,13 @@ const INFO_BOX_3 = {
   ],
   btn1: {
     text: "Book a Pitch",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Join League",
-    link: "/book-now",
+    link: WHATSAPP_LINK,
+    target: "_blank",
     color: "#000000",
     padding: "12px 40px",
   },

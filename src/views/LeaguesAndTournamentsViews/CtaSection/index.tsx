@@ -6,7 +6,11 @@ const CTASection = () => {
     <section className={styles["cta__section"]}>
       <div className={styles["cta__container"]}>
         <h2>Watch our live matches</h2>
-        <OrangeButton text="Click Here" link="" />
+        <OrangeButton
+          text="Click Here"
+          link="https://www.youtube.com/@insportzdxb/streams"
+          target="_blank"
+        />
       </div>
     </section>
   );

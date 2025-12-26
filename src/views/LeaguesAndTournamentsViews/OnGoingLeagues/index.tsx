@@ -92,7 +92,11 @@ const OnGoingLeagues = () => {
           </div>
 
           <h2 className={styles["title"]}>View Our On-Going Leagues</h2>
-          <BlackButton text="Click Here" link="" />
+          <BlackButton
+            text="Click Here"
+            link="https://insportzclub.spawtz.com/ActionController/LeagueList?VenueId=2"
+            target="_blank"
+          />
         </div>
       </div>
 

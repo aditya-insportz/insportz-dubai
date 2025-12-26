@@ -16,6 +16,7 @@ import BD2 from "assets/images/football/football-2.png";
 import BD3 from "assets/images/football/football-3.png";
 import BD4 from "assets/images/football/football-4.png";
 import BD5 from "assets/images/football/football-5.png";
+import { BOOK_NOW_LINK, WHATSAPP_LINK, APP_ROUTES } from "@/utils/constants";
 
 const HERO_DATA = {
   title: "Football Dubai | 5-a-Side at Insportz",
@@ -23,11 +24,12 @@ const HERO_DATA = {
     "Play 5-a-side or 6-a-side football in Dubai at Insportz. LED-lit, all-weather indoor turf for casual games, leagues, and events.",
   btn1: {
     text: "Book Now",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Explore More",
-    link: "/book-now",
+    link: APP_ROUTES.CONTACT_US,
   },
   bgLg: HeroBgLg,
   bgSm: HeroBgSm,
@@ -40,7 +42,8 @@ const INFO_SECTION_DATA = {
   img1: BD1,
   img2: BD2,
   img3: BD3,
-  link: "/book-now",
+  link: BOOK_NOW_LINK,
+  target: "_blank",
 };
 
 const INFO_BOX_1 = {
@@ -60,13 +63,14 @@ const INFO_BOX_2 = {
   ],
   btn1: {
     text: "Book a Turf",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Join League",
-    link: "/book-now",
+    link: WHATSAPP_LINK,
+    target: "_blank",
     color: "#000000",
-    // padding: "12px 32px",
   },
 };
 

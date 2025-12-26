@@ -11,16 +11,10 @@ import FacilityBgLg from "assets/images/facility/facility-bg-lg.png";
 import FacilityBgSm from "assets/images/facility/facility-bg-sm.png";
 import styles from "./style.module.scss";
 import HeroSection from "@/components/HeroSection";
-import { BOOK_NOW_LINK } from "@/utils/constants";
+import { APP_ROUTES, BOOK_NOW_LINK } from "@/utils/constants";
 import AboutFacilty from "@/views/FaciltyViews/AboutFacilty";
 
-const GALLERY_IMAGES = [
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery4,
-  Gallery5,
-];
+const GALLERY_IMAGES = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5];
 
 const HERO_SECTION_DATA = {
   title: "Insportz Facility",
@@ -33,7 +27,7 @@ const HERO_SECTION_DATA = {
   },
   btn2: {
     text: "Explore More",
-    link: "/book-now",
+    link: APP_ROUTES.CONTACT_US,
   },
   bgLg: FacilityBgLg,
   bgSm: FacilityBgSm,

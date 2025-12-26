@@ -16,6 +16,7 @@ import InfoSection from "@/components/InfoSection";
 import Padel1 from "assets/images/padel/padel-1.png";
 import Padel2 from "assets/images/padel/padel-2.png";
 import Padel3 from "assets/images/padel/padel-3.png";
+import { APP_ROUTES, BOOK_NOW_LINK, WHATSAPP_LINK } from "@/utils/constants";
 
 const HERO_DATA = {
   title: "Padel Court Dubai | Play Padel at Insportz Club",
@@ -23,11 +24,12 @@ const HERO_DATA = {
     "Book your padel court in Dubai at Insportz. Social, exciting, and perfect for 1:1 games. Play or train at our premium indoor courts.",
   btn1: {
     text: "Book Now",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Explore More",
-    link: "/book-now",
+    link: APP_ROUTES.CONTACT_US,
   },
   bgLg: HeroBgLg,
   bgSm: HeroBgSm,
@@ -60,11 +62,13 @@ const INFO_BOX_2 = {
   ],
   btn1: {
     text: "Book a Court",
-    link: "/book-now",
+    link: BOOK_NOW_LINK,
+    target: "_blank",
   },
   btn2: {
     text: "Join Coaching",
-    link: "/book-now",
+    link: WHATSAPP_LINK,
+    target: "_blank",
     color: "#000000",
     padding: "12px 32px",
   },

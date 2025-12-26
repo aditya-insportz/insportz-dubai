@@ -9,10 +9,12 @@ interface InfoBoxProps {
   btn1?: {
     text: string;
     link: string;
+    target?: string;
   };
   btn2?: {
     text: string;
     link: string;
+    target?: string;
     color?: string;
     padding?: string;
   };
@@ -30,18 +32,25 @@ const InfoBox = ({ title, listItems, content, btn1, btn2 }: InfoBoxProps) => {
         </ul>
       )}
       {content && (
-        <div 
-          className={styles["content"]} 
+        <div
+          className={styles["content"]}
           dangerouslySetInnerHTML={{ __html: content }}
         />
       )}
       {(btn1?.text || btn2?.text) && (
         <div className={styles["info__cta"]}>
-          {btn1?.text && <DarkButton text={btn1.text} link={btn1.link} />}
+          {btn1?.text && (
+            <DarkButton
+              text={btn1.text}
+              link={btn1.link}
+              target={btn1.target}
+            />
+          )}
           {btn2?.text && (
             <BlurButton
               text={btn2.text}
               link={btn2.link}
+              target={btn2.target}
               color={btn2.color}
               padding={btn2.padding}
             />

@@ -8,6 +8,7 @@ interface InfoSectionProps {
   img2: string;
   img3: string;
   link: string;
+  target?: string;
 }
 
 const InfoSection = ({
@@ -17,6 +18,7 @@ const InfoSection = ({
   img2,
   img3,
   link,
+  target = "_self",
 }: InfoSectionProps) => {
   return (
     <section className={styles["info__section"]}>
@@ -29,7 +31,7 @@ const InfoSection = ({
           <div className={styles["info__content"]}>
             <img src={window.innerWidth > 768 ? img2 : img3} alt="Padel" />
             <p>{content}</p>
-            <DarkButton text="Book Now" link={link} />
+            <DarkButton text="Book Now" link={link} target={target} />
           </div>
         </div>
       </div>

@@ -6,58 +6,58 @@ import Chevron from "assets/icons/chevron-down.png";
 import ChevronWhite from "assets/icons/chevron-down-white.png";
 import styles from "./style.module.scss";
 import Arrow from "assets/icons/arrow.svg";
-import { BOOK_NOW_LINK } from "@/utils/constants";
+import { BOOK_NOW_LINK, APP_ROUTES } from "@/utils/constants";
 
 const NAVBAR_ITEMS = [
   {
     label: "Home",
-    link: "/",
+    link: APP_ROUTES.HOME,
   },
   {
     label: "Facility",
-    link: "/facility",
+    link: APP_ROUTES.FACILITY,
     subItems: [
       {
         label: "Indoor Cricket",
-        link: "/indoor-cricket",
+        link: APP_ROUTES.INDOOR_CRICKET,
       },
       {
         label: "Padel",
-        link: "/padel",
+        link: APP_ROUTES.PADEL,
       },
       {
         label: "Badminton",
-        link: "/badminton",
+        link: APP_ROUTES.BADMINTON,
       },
       {
         label: "Volleyball",
-        link: "/volleyball",
+        link: APP_ROUTES.VOLLEYBALL,
       },
       {
         label: "Football",
-        link: "/football",
+        link: APP_ROUTES.FOOTBALL,
       },
       {
         label: "Table Tennis",
-        link: "/table-tennis",
+        link: APP_ROUTES.TABLE_TENNIS,
       },
     ],
   },
   {
     label: "Leagues & Tournaments",
-    link: "/leagues-and-tournaments",
+    link: APP_ROUTES.LEAGUES_AND_TOURNAMENTS,
   },
   {
     label: "Training & Coaching",
-    link: "/training-and-coaching",
+    link: APP_ROUTES.TRAINING_AND_COACHING,
   },
   {
     label: "Corporate & Parties",
-    link: "/corporate-and-parties",
+    link: APP_ROUTES.CORPORATE_AND_PARTIES,
   },
   {
     label: "Contact Us",
-    link: "/contact-us",
+    link: APP_ROUTES.CONTACT_US,
   },
 ];
 
@@ -78,7 +78,7 @@ function Navbar() {
     return (
       <nav className={styles["navbar"]}>
         <div className={styles["nav__container"]}>
-          <Link to="/" className={styles["nav__logo"]}>
+          <Link to={APP_ROUTES.HOME} className={styles["nav__logo"]}>
             <img
               src={InsportzLogo}
               alt="Insportz Dubai"
@@ -132,7 +132,7 @@ function Navbar() {
   return (
     <nav className={styles["navbar"]}>
       <div className={styles["nav__container"]}>
-        <Link to="/" className={styles["nav__logo"]}>
+        <Link to={APP_ROUTES.HOME} className={styles["nav__logo"]}>
           <img
             src={InsportzLogo}
             alt="Insportz Dubai"
