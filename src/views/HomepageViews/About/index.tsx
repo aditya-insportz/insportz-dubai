@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import DarkButton from "components/Buttons/DarkButton";
 import ImageLg from "assets/images/homepage/about-lg.png";
 import ImageSm from "assets/images/homepage/about-sm.png";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
 import FacilitySm from "assets/images/homepage/facility-sm.png";
 import FacilityLg from "assets/images/homepage/facility-lg.png";
-import { APP_ROUTES } from "@/utils/constants";
 
 const FACILITIES_DATA = {
   title: "Facility Features:",
@@ -77,7 +75,6 @@ function About() {
               through state-of-the-art venues, expert coaching and a welcoming
               environment where sport is accessible, social and inspiring.
             </p>
-            <DarkButton text="More About Us" link={APP_ROUTES.FACILITY} />
           </div>
           <div className={styles["about__image"]}>
             <img

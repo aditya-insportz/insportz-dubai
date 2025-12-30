@@ -89,15 +89,53 @@
         transition: background 0.3s;
         margin-block: 16px;
 
+        &:disabled {
+          background: #666;
+          cursor: not-allowed;
+        }
+
         @media (min-width: 768px) {
           font-size: 24px;
           margin-block: 24px;
         }
 
-        &:hover {
+        &:hover:not(:disabled) {
           background: #333;
         }
       }
     }
+  }
+}
+
+.success-message {
+  background: #4caf50;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.error-message {
+  background: #f44336;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

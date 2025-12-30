@@ -11,6 +11,7 @@ import LeaguesAndTournaments from "./pages/LeaguesAndTournaments";
 import TrainingAndCoaching from "./pages/TrainingAndCoaching";
 import CorporateAndParties from "./pages/CorporateAndParties";
 import ContactUs from "./pages/ContactUs";
+import WhatsAppButton from "./components/WhatsAppButton";
 import { APP_ROUTES } from "./utils/constants";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         />
         <Route path={APP_ROUTES.CONTACT_US} element={<ContactUs />} />
       </Routes>
+      <WhatsAppButton />
     </Router>
   );
 }

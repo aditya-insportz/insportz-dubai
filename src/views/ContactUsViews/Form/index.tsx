@@ -11,14 +11,63 @@ const Form = () => {
     companyName: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    setIsLoading(true);
+    setShowError(false);
+    setShowSuccess(false);
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbyBal8DHB5PH8jyXPqbVG0PQV-Rozct4o4M_FSt5QSsIYPsEt2_-pyQQMu8rXzIfdoc/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            ...formData,
+            secret: "FORM_V1_INSPORTZ_DUBAI",
+          }),
+        }
+      );
+
+      const result = await res.json();
+
+      if (result.success) {
+        setFormData({
+          fullName: "",
+          mobileNo: "",
+          email: "",
+          address: "",
+          enquiryType: "",
+          companyName: "",
+          message: "",
+        });
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 5000);
+      } else {
+        setErrorMessage("Something went wrong. Please try again.");
+        setShowError(true);
+        setTimeout(() => setShowError(false), 5000);
+      }
+    } catch (err) {
+      setErrorMessage(
+        "Submission failed. Please check your connection and try again."
+      );
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -94,7 +143,17 @@ const Form = () => {
               required
             />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? "Submitting..." : "Submit"}
+          </button>
+          {showSuccess && (
+            <div className={styles["success-message"]}>
+              ✓ Form submitted successfully!
+            </div>
+          )}
+          {showError && (
+            <div className={styles["error-message"]}>✗ {errorMessage}</div>
+          )}
         </form>
       </div>
     </section>
