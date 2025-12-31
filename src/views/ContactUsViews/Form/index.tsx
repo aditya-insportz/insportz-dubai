@@ -28,9 +28,31 @@ const Form = () => {
     setShowError(false);
     setShowSuccess(false);
 
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setErrorMessage("Please enter a valid email address.");
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000);
+      setIsLoading(false);
+      return;
+    }
+
+    // Phone validation (if provided)
+    if (formData.mobileNo) {
+      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+      if (!phoneRegex.test(formData.mobileNo.replace(/\s/g, ""))) {
+        setErrorMessage("Please enter a valid phone number.");
+        setShowError(true);
+        setTimeout(() => setShowError(false), 5000);
+        setIsLoading(false);
+        return;
+      }
+    }
+
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbyBal8DHB5PH8jyXPqbVG0PQV-Rozct4o4M_FSt5QSsIYPsEt2_-pyQQMu8rXzIfdoc/exec",
+        "https://script.google.com/macros/s/AKfycbxbxXMMT8n36LpT8x2OS6_pjKWmiWDOpxfmTgCFAtHM-MyPaBDHtAYasYHcCQxh42pm/exec",
         {
           method: "POST",
           body: JSON.stringify({
@@ -55,7 +77,9 @@ const Form = () => {
         setShowSuccess(true);
         setTimeout(() => setShowSuccess(false), 5000);
       } else {
-        setErrorMessage("Something went wrong. Please try again.");
+        setErrorMessage(
+          result.error || "Something went wrong. Please try again."
+        );
         setShowError(true);
         setTimeout(() => setShowError(false), 5000);
       }
@@ -91,7 +115,6 @@ const Form = () => {
               name="mobileNo"
               value={formData.mobileNo}
               onChange={handleChange}
-              required
             />
           </div>
           <div className={styles["form-group"]}>
@@ -111,7 +134,6 @@ const Form = () => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              required
             />
           </div>
           <div className={styles["form-group"]}>
@@ -121,11 +143,10 @@ const Form = () => {
               name="enquiryType"
               value={formData.enquiryType}
               onChange={handleChange}
-              required
             />
           </div>
           <div className={styles["form-group"]}>
-            <label>Company Name (Optional)</label>
+            <label>Company Name</label>
             <input
               type="text"
               name="companyName"
@@ -140,7 +161,6 @@ const Form = () => {
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              required
             />
           </div>
           <button type="submit" disabled={isLoading}>
