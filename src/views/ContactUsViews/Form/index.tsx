@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FORM_SUBMISSION_URL } from "@/utils/constants";
 import styles from "./style.module.scss";
 
 const Form = () => {
@@ -52,7 +53,7 @@ const Form = () => {
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbxbxXMMT8n36LpT8x2OS6_pjKWmiWDOpxfmTgCFAtHM-MyPaBDHtAYasYHcCQxh42pm/exec",
+        FORM_SUBMISSION_URL,
         {
           method: "POST",
           body: JSON.stringify({

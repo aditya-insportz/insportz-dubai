@@ -3,6 +3,8 @@ export const BOOK_NOW_LINK =
 
 export const WHATSAPP_LINK = "https://wa.me/971586450292";
 
+export const FORM_SUBMISSION_URL = "https://script.google.com/macros/s/AKfycby-au7JUs7Ic3BckAtOiWkun3-ag-7aoWXUyJnjByJsyOQ_cK3_K-GI5VNkKvVPtKNM/exec";
+
 export const APP_ROUTES = {
   HOME: "/",
   FACILITY: "/facility",
@@ -12,8 +14,8 @@ export const APP_ROUTES = {
   VOLLEYBALL: "/volleyball",
   FOOTBALL: "/football",
   TABLE_TENNIS: "/table-tennis",
-  LEAGUES_AND_TOURNAMENTS: "/leagues-and-tournaments",
+  LEAGUES_AND_TOURNAMENTS: "/leagues-tournaments",
   TRAINING_AND_COACHING: "/training-and-coaching",
-  CORPORATE_AND_PARTIES: "/corporate-and-parties",
+  CORPORATE_AND_PARTIES: "/corporate-events-and-team-building",
   CONTACT_US: "/contact-us",
 } as const;

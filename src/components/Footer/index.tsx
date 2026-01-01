@@ -3,31 +3,32 @@ import Logo from "assets/icons/insportz-logo-white.png";
 import Phone from "assets/icons/phone.png";
 import Email from "assets/icons/email.png";
 import Region from "assets/icons/region.png";
+import { APP_ROUTES } from "@/utils/constants";
 
 const QUICK_LINKS = [
   {
     label: "Home",
-    link: "/",
+    link: APP_ROUTES.HOME,
   },
   {
     label: "Facility",
-    link: "/facility",
+    link: APP_ROUTES.FACILITY,
   },
   {
     label: "Leagues & Tournaments",
-    link: "/leagues-and-tournaments",
+    link: APP_ROUTES.LEAGUES_AND_TOURNAMENTS,
   },
   {
     label: "Training & Coaching",
-    link: "/training-and-coaching",
+    link: APP_ROUTES.TRAINING_AND_COACHING,
   },
   {
     label: "Corporate & Parties",
-    link: "/corporate-and-parties",
+    link: APP_ROUTES.CORPORATE_AND_PARTIES,
   },
   {
     label: "Contact",
-    link: "/contact-us",
+    link: APP_ROUTES.CONTACT_US,
   },
 ];
 
