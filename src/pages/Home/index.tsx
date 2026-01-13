@@ -40,6 +40,7 @@ function Home() {
       <StructuredData />
       <Navbar />
       <div className={styles["home__wrapper"]}>
+        <h1 style={{position: 'absolute', left: '-9999px'}}>Insportz Dubai - Premier Sports Facility</h1>
         <HomeHero videoId="JrmuLTjAU2g" />
         <About />
         <Sports />

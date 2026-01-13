@@ -37,6 +37,7 @@ function CorporateAndParties() {
       />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
+        <h1 style={{position: 'absolute', left: '-9999px'}}>Corporate Events & Birthday Parties Dubai</h1>
         <HeroImageSection
           imageLg={CorporateLg}
           imageSm={CorporateSm}
