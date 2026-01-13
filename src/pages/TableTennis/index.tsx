@@ -1,5 +1,6 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
 import HeroBgLg from "assets/images/table-tennis/tt-hero-lg.png";
@@ -80,6 +81,14 @@ const GALLERY_IMGS = [bdGallery1, bdGallery2, bdGallery3, bdGallery4];
 function TableTennis() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Table Tennis Dubai | Play Ping Pong Indoors",
+          description: "Enjoy indoor table tennis in Dubai at Insportz. Book tables by the hour, practice with friends, or join coaching sessions.",
+          path: "/facility/table-tennis",
+          keywords: "table tennis dubai, ping pong dubai, table tennis coaching dubai, table tennis lessons dubai, indoor table tennis dubai, insportz table tennis"
+        }}
+      />
       <Navbar />
       <div className={styles["padel__container"]}>
         <HeroSection {...HERO_DATA} />
@@ -88,13 +97,13 @@ function TableTennis() {
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_1} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD4} alt="Indoor Cricket 2" />
+              <img src={BD4} alt="Table tennis tables at Insportz Dubai" />
             </div>
           </div>
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_2} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD5} alt="Indoor Cricket 2" />
+              <img src={BD5} alt="Table tennis players at Insportz Dubai facility" />
             </div>
           </div>
         </section>

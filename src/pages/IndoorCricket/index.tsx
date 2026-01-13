@@ -1,5 +1,6 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import IndoorCricketDubai from "views/IndoorCricket/IndoorCricketDubai";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
@@ -77,6 +78,14 @@ const GALLERY_IMGS = [icGallery1, icGallery2, icGallery3, icGallery4];
 function IndoorCricket() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Indoor Cricket Dubai | Play at Insportz Club",
+          description: "Play at the home of indoor cricket in Dubai! Book games, join leagues, or host corporate tournaments at Insportz Dubai.",
+          path: "/facility/indoor-cricket",
+          keywords: "indoor cricket dubai, cricket facility dubai, cricket leagues dubai, cricket tournaments dubai, 6-a-side cricket, 8-a-side cricket, insportz cricket"
+        }}
+      />
       <Navbar />
       <div className={styles["indoor__cricket__container"]}>
         <HeroSection {...HERO_DATA} />

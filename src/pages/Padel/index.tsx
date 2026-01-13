@@ -1,5 +1,6 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
 import Padel4 from "assets/images/padel/padel-4.png";
@@ -84,6 +85,14 @@ const GALLERY_IMGS = [
 function Padel() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Padel Court Dubai | Play Padel at Insportz Club",
+          description: "Book your padel court in Dubai at Insportz. Social, exciting, and perfect for 1:1 games. Play or train at our premium indoor courts.",
+          path: "/facility/padel",
+          keywords: "padel dubai, padel court dubai, padel booking dubai, padel lessons dubai, padel coaching dubai, glass court padel, insportz padel"
+        }}
+      />
       <Navbar />
       <div className={styles["padel__container"]}>
         <HeroSection {...HERO_DATA} />
@@ -92,13 +101,13 @@ function Padel() {
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_1} />
             <div className={styles["image__wrapper"]}>
-              <img src={Padel4} alt="Indoor Cricket 2" />
+              <img src={Padel4} alt="Padel court at Insportz Dubai" />
             </div>
           </div>
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_2} />
             <div className={styles["image__wrapper"]}>
-              <img src={Padel5} alt="Indoor Cricket 2" />
+              <img src={Padel5} alt="Padel players at Insportz Dubai facility" />
             </div>
           </div>
         </section>

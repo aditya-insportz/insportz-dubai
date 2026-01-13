@@ -1,5 +1,6 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
 import HeroBgLg from "assets/images/volleyball/volleyball-hero-lg.png";
@@ -80,6 +81,14 @@ const GALLERY_IMGS = [bdGallery1, bdGallery2, bdGallery3, bdGallery4];
 function Volleyball() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Volleyball Dubai | Book a Court at Insportz",
+          description: "Spike, serve, and smash! Play volleyball in Dubai at Insportz. Book our indoor court for team games, leagues, or corporate matches.",
+          path: "/facility/volleyball",
+          keywords: "volleyball dubai, volleyball court dubai, volleyball leagues dubai, indoor volleyball dubai, volleyball coaching dubai, insportz volleyball"
+        }}
+      />
       <Navbar />
       <div className={styles["padel__container"]}>
         <HeroSection {...HERO_DATA} />
@@ -88,13 +97,13 @@ function Volleyball() {
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_1} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD4} alt="Indoor Cricket 2" />
+              <img src={BD4} alt="Volleyball court at Insportz Dubai" />
             </div>
           </div>
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_2} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD5} alt="Indoor Cricket 2" />
+              <img src={BD5} alt="Volleyball players at Insportz Dubai facility" />
             </div>
           </div>
         </section>

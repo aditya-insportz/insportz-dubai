@@ -1,0 +1,21 @@
+{
+  "name": "Insportz Dubai - Premier Sports Facility",
+  "short_name": "Insportz Dubai",
+  "description": "Experience world-class sports facilities in Dubai. Indoor Cricket, Padel, Badminton, Volleyball, Football, and Table Tennis.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f0f0f",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

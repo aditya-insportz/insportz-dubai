@@ -1,5 +1,6 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import GallerySection from "components/GallerySection";
 import CorporateGallery1 from "assets/images/corporate-and-parties/corporate-gallery-1.png";
 import CorporateGallery2 from "assets/images/corporate-and-parties/corporate-gallery-2.png";
@@ -26,6 +27,14 @@ const PARTY_GALLERY_IMAGES = [PartyGallery1, PartyGallery2, PartyGallery3, Party
 function CorporateAndParties() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Corporate Events & Birthday Parties Dubai | Insportz",
+          description: "Host corporate events and birthday parties at Insportz Dubai. Team building activities, private bookings, and memorable celebrations.",
+          path: "/corporate-events-and-team-building",
+          keywords: "corporate events dubai, team building dubai, birthday parties dubai, corporate sports events dubai, private venue dubai, insportz events"
+        }}
+      />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
         <HeroImageSection

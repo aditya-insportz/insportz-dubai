@@ -1,5 +1,6 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
 import HeroBgLg from "assets/images/badminton/badminton-hero-lg.png";
@@ -79,6 +80,14 @@ const GALLERY_IMGS = [bdGallery1, bdGallery2, bdGallery3, bdGallery4];
 function Badminton() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Badminton Courts in Dubai | Insportz Club",
+          description: "Play badminton in Dubai at Insportz. High-quality indoor courts, coaching for all levels, and hourly court bookings available.",
+          path: "/facility/badminton",
+          keywords: "badminton dubai, badminton court dubai, badminton coaching dubai, badminton lessons dubai, indoor badminton dubai, insportz badminton"
+        }}
+      />
       <Navbar />
       <div className={styles["padel__container"]}>
         <HeroSection {...HERO_DATA} />
@@ -87,13 +96,13 @@ function Badminton() {
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_1} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD4} alt="Indoor Cricket 2" />
+              <img src={BD4} alt="Badminton court at Insportz Dubai" />
             </div>
           </div>
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_2} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD5} alt="Indoor Cricket 2" />
+              <img src={BD5} alt="Badminton players at Insportz Dubai facility" />
             </div>
           </div>
         </section>

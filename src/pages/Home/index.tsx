@@ -1,5 +1,7 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
+import StructuredData from "components/StructuredData";
 import HomeHero from "views/HomepageViews/HomeHero";
 import About from "views/HomepageViews/About";
 import Sports from "views/HomepageViews/Sports";
@@ -27,6 +29,15 @@ const GALLERY_IMAGES = [
 function Home() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Insportz Dubai - Premier Sports Facility",
+          description: "Experience world-class sports facilities in Dubai. Indoor Cricket, Padel, Badminton, Volleyball, Football, and Table Tennis at Insportz Dubai.",
+          path: "/",
+          keywords: "sports facility dubai, indoor cricket dubai, padel dubai, badminton dubai, volleyball dubai, football dubai, table tennis dubai, insportz club"
+        }}
+      />
+      <StructuredData />
       <Navbar />
       <div className={styles["home__wrapper"]}>
         <HomeHero videoId="JrmuLTjAU2g" />

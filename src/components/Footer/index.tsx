@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles["footer__bottom"]}>
-        © 2024 INSPORTZ. ALL RIGHTS RESERVED.
+        © {new Date().getFullYear()} INSPORTZ. ALL RIGHTS RESERVED.
       </div>
     </section>
   );

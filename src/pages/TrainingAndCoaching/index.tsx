@@ -1,5 +1,6 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import GallerySection from "components/GallerySection";
 import Gallery1 from "assets/images/training-and-coaching/training-gallery-1.png";
 import Gallery2 from "assets/images/training-and-coaching/training-gallery-2.png";
@@ -19,6 +20,14 @@ const GALLERY_IMAGES = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5];
 function TrainingAndCoaching() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Sports Training & Coaching Dubai | Insportz",
+          description: "Professional sports training and coaching in Dubai. Cricket, football, badminton, tennis, and more. Kids and adult programs available.",
+          path: "/training-and-coaching",
+          keywords: "sports coaching dubai, sports training dubai, cricket coaching dubai, football coaching dubai, kids sports dubai, adult sports training dubai"
+        }}
+      />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
         <HeroImageSection

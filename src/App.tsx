@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
 import IndoorCricket from "pages/IndoorCricket";
 import Padel from "pages/Padel";
@@ -16,7 +17,8 @@ import { APP_ROUTES } from "./utils/constants";
 
 function App() {
   return (
-    <Router>
+    <HelmetProvider>
+      <Router>
       <Routes>
         <Route path={APP_ROUTES.HOME} element={<Home />} />
         <Route path={APP_ROUTES.FACILITY} element={<Facilty />} />
@@ -41,7 +43,8 @@ function App() {
         <Route path={APP_ROUTES.CONTACT_US} element={<ContactUs />} />
       </Routes>
       <WhatsAppButton />
-    </Router>
+      </Router>
+    </HelmetProvider>
   );
 }
 

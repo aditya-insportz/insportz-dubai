@@ -1,5 +1,6 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import GallerySection from "components/GallerySection";
 import CTA from "views/HomepageViews/CtaSection";
 import Gallery1 from "assets/images/facility/facilty-gallery-1.png";
@@ -36,6 +37,14 @@ const HERO_SECTION_DATA = {
 function Facilty() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Sports Facility Dubai | Insportz Club",
+          description: "Experience top-quality turfs, courts, and training spaces designed to elevate performance at every level. Play, train, and compete in Dubai.",
+          path: "/facility",
+          keywords: "sports facility dubai, sports complex dubai, indoor sports dubai, sports venue dubai, multi-sport facility dubai, insportz facility"
+        }}
+      />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
         <HeroSection {...HERO_SECTION_DATA} />

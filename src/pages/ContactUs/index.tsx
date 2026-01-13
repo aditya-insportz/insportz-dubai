@@ -1,5 +1,6 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import Form from "@/views/ContactUsViews/Form";
 import ContactInfo from "@/views/ContactUsViews/ContactInfo";
 import styles from "./style.module.scss";
@@ -7,6 +8,14 @@ import styles from "./style.module.scss";
 function ContactUs() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Contact Insportz Dubai | Get in Touch",
+          description: "Contact Insportz Dubai for bookings, inquiries, and more information. Visit our sports facility or reach out to our team today.",
+          path: "/contact-us",
+          keywords: "contact insportz dubai, sports facility contact dubai, insportz location dubai, sports booking dubai, insportz phone number"
+        }}
+      />
       <Navbar />
       <div className={styles["contact__wrapper"]}>
         <div className={styles["hero__section"]}>

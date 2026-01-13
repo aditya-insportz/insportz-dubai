@@ -1,5 +1,6 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
 import HeroBgLg from "assets/images/football/football-hero-lg.png";
@@ -79,6 +80,14 @@ const GALLERY_IMGS = [bdGallery1, bdGallery2, bdGallery3, bdGallery4];
 function Football() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Football Dubai | 5-a-Side at Insportz",
+          description: "Play 5-a-side or 6-a-side football in Dubai at Insportz. LED-lit, all-weather indoor turf for casual games, leagues, and events.",
+          path: "/facility/football",
+          keywords: "football dubai, 5-a-side football dubai, 6-a-side football dubai, indoor football dubai, football turf dubai, insportz football"
+        }}
+      />
       <Navbar />
       <div className={styles["padel__container"]}>
         <HeroSection {...HERO_DATA} />
@@ -87,13 +96,13 @@ function Football() {
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_1} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD4} alt="Indoor Cricket 2" />
+              <img src={BD4} alt="Football turf at Insportz Dubai" />
             </div>
           </div>
           <div className={styles["content__wrapper"]}>
             <InfoBox {...INFO_BOX_2} />
             <div className={styles["image__wrapper"]}>
-              <img src={BD5} alt="Indoor Cricket 2" />
+              <img src={BD5} alt="Football players at Insportz Dubai facility" />
             </div>
           </div>
         </section>

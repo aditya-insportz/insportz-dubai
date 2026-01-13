@@ -1,5 +1,6 @@
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import Head from "components/Head";
 import GallerySection from "components/GallerySection";
 import Gallery1 from "assets/images/leagues-and-tournaments/league-gallery-1.png";
 import Gallery2 from "assets/images/leagues-and-tournaments/league-gallery-2.png";
@@ -19,6 +20,14 @@ const GALLERY_IMAGES = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5];
 function LeaguesAndTournaments() {
   return (
     <>
+      <Head 
+        metadata={{
+          title: "Sports Leagues & Tournaments Dubai | Insportz",
+          description: "Join competitive sports leagues and tournaments in Dubai at Insportz. Cricket, football, padel, and more. Build community through sport.",
+          path: "/leagues-tournaments",
+          keywords: "sports leagues dubai, sports tournaments dubai, cricket leagues dubai, football leagues dubai, competitive sports dubai, insportz leagues"
+        }}
+      />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
         <HeroImageSection 
