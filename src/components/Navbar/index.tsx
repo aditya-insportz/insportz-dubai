@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import InsportzLogo from "assets/icons/insportz-logo.png";
@@ -65,6 +65,9 @@ function Navbar() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedFacility, setExpandedFacility] = useState(false);
+  const [showDeskNavbar, setShowDeskNavbar] = useState(true);
+  const location = useLocation();
+  let lastScrollY = 0;
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,9 +77,27 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScrollY && currentScroll > 50) {
+        setShowDeskNavbar(false);
+      } else {
+        setShowDeskNavbar(true);
+      }
+      lastScrollY = currentScroll;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   if (isDesktop) {
     return (
-      <nav className={styles["navbar"]}>
+      <nav
+        className={`${styles["navbar"]} ${
+          showDeskNavbar ? styles["navbar--visible"] : styles["navbar--hidden"]
+        }`}
+      >
         <div className={styles["nav__container"]}>
           <Link to={APP_ROUTES.HOME} className={styles["nav__logo"]}>
             <img
@@ -90,7 +111,14 @@ function Navbar() {
               <li key={item.label} className={styles["nav__item"]}>
                 {item.subItems ? (
                   <div className={styles["dropdown"]}>
-                    <Link to={item.link} className={styles["nav__link"]}>
+                    <Link
+                      to={item.link}
+                      className={`${styles["nav__link"]} ${
+                        location.pathname === item.link
+                          ? styles["nav__link--active"]
+                          : ""
+                      }`}
+                    >
                       {item.label}
                       <img src={Chevron} alt="" className={styles["chevron"]} />
                     </Link>
@@ -111,7 +139,14 @@ function Navbar() {
                     </ul>
                   </div>
                 ) : (
-                  <Link to={item.link} className={styles["nav__link"]}>
+                  <Link
+                    to={item.link}
+                    className={`${styles["nav__link"]} ${
+                      location.pathname === item.link
+                        ? styles["nav__link--active"]
+                        : ""
+                    }`}
+                  >
                     {item.label}
                   </Link>
                 )}
