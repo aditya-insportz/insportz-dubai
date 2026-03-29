@@ -30,11 +30,11 @@ function LeaguesAndTournaments() {
       />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
-        <h1 style={{position: 'absolute', left: '-9999px'}}>Sports Leagues & Tournaments Dubai</h1>
-        <HeroImageSection 
+        <HeroImageSection
           imageLg={LeaguesLg}
           imageSm={LeaguesSm}
           alt="Leagues and Tournaments"
+          heading="Leagues & Tournaments"
         />
 
         <BuildingCommunity />

@@ -5,9 +5,10 @@ interface HeroImageSectionProps {
   imageLg: string;
   imageSm: string;
   alt: string;
+  heading?: string;
 }
 
-const HeroImageSection = ({ imageLg, imageSm, alt }: HeroImageSectionProps) => {
+const HeroImageSection = ({ imageLg, imageSm, alt, heading }: HeroImageSectionProps) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
   useEffect(() => {
@@ -24,6 +25,13 @@ const HeroImageSection = ({ imageLg, imageSm, alt }: HeroImageSectionProps) => {
         src={isDesktop ? imageLg : imageSm}
         alt={alt}
       />
+      {heading && (
+        <div className={styles["hero__overlay"]}>
+          <div className={styles["hero__overlay__inner"]}>
+            <h1 className={styles["hero__heading"]}>{heading}</h1>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,9 +1,38 @@
 .hero__section {
   width: 100%;
-  
+  position: relative;
+
   img {
     width: 100%;
     height: auto;
     display: block;
   }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay__inner {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 30px;
+
+  @media (min-width: 769px) {
+    padding: 0 96px;
+  }
+}
+
+.hero__heading {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
+  margin: 0;
 }

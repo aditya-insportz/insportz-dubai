@@ -30,11 +30,11 @@ function TrainingAndCoaching() {
       />
       <Navbar />
       <div className={styles["facilty__wrapper"]}>
-        <h1 style={{position: 'absolute', left: '-9999px'}}>Sports Training & Coaching Dubai</h1>
         <HeroImageSection
           imageLg={TrainingLg}
           imageSm={TrainingSm}
           alt="Training and Coaching"
+          heading="Training & Coaching"
         />
 
         <TrainingSection />
