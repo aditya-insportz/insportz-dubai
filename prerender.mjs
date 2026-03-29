@@ -32,7 +32,10 @@ const server = createServer((req, res) =>
 await new Promise(resolve => server.listen(PORT, resolve))
 console.log(`Server running at http://localhost:${PORT}`)
 
-const browser = await puppeteer.launch({ headless: true })
+const browser = await puppeteer.launch({
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+})
 
 for (const route of ROUTES) {
   const page = await browser.newPage()
