@@ -19,11 +19,20 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Install Chromium dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 \
+            libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 \
+            libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 \
+            libpangocairo-1.0-0 libnss3 libnspr4
+
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build with pre-rendering
+        run: npm run build:prerender
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
