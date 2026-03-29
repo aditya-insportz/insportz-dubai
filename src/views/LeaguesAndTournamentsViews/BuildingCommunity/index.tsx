@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import Community from "assets/images/leagues-and-tournaments/community.png";
+import Community from "assets/images/leagues-and-tournaments/community.webp";
 
 const BuildingCommunity = () => {
   return (

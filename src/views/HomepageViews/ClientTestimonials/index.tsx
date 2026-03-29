@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "./style.module.scss";
-import Sanjay from "assets/images/homepage/sanjay-chaudhary.png";
-import Alice from "assets/images/homepage/alice-rodrigues.png";
-import Matt from "assets/images/homepage/matt-floros.png";
-import Anish from "assets/images/homepage/anish-patel.png";
+import Sanjay from "assets/images/homepage/sanjay-chaudhary.webp";
+import Alice from "assets/images/homepage/alice-rodrigues.webp";
+import Matt from "assets/images/homepage/matt-floros.webp";
+import Anish from "assets/images/homepage/anish-patel.webp";
 import TestimonailCard from "./TestimonialCard";
 import ArrowLeft from "assets/icons/arrow-left.svg";
 import ArrowRight from "assets/icons/arrow-right.svg";

@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ImageLg from "assets/images/facility/about-facilty-lg.png";
-import ImageSm from "assets/images/facility/about-facilty-sm.png";
-import Facility from "assets/images/facility/facilty.png";
-import WC1 from "assets/images/facility/world-cup-1.png";
-import WC2 from "assets/images/facility/world-cup-2.png";
-import Cricket1 from "assets/images/facility/cricket-1.png";
-import Cricket2 from "assets/images/facility/cricket-2.png";
-import Logo1 from "assets/images/facility/logo-1997.png";
-import Logo2 from "assets/images/facility/logo-2019.png";
-import Logo3 from "assets/images/facility/logo-present.png";
+import ImageLg from "assets/images/facility/about-facilty-lg.webp";
+import ImageSm from "assets/images/facility/about-facilty-sm.webp";
+import Facility from "assets/images/facility/facilty.webp";
+import WC1 from "assets/images/facility/world-cup-1.webp";
+import WC2 from "assets/images/facility/world-cup-2.webp";
+import Cricket1 from "assets/images/facility/cricket-1.webp";
+import Cricket2 from "assets/images/facility/cricket-2.webp";
+import Logo1 from "assets/images/facility/logo-1997.webp";
+import Logo2 from "assets/images/facility/logo-2019.webp";
+import Logo3 from "assets/images/facility/logo-present.webp";
 import styles from "./style.module.scss";
 import InfoBox from "@/components/InfoBox";
 

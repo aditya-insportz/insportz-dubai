@@ -4,12 +4,12 @@ import styles from "./style.module.scss";
 import SportCard from "./SportCard";
 import ChevronLeft from "assets/icons/chevron-left.svg";
 import ChevronRight from "assets/icons/chevron-right.svg";
-import IndoorCricket from "assets/images/homepage/indoor-cricket.png";
-import Football from "assets/images/homepage/football.png";
-import Badminton from "assets/images/homepage/badminton.png";
-import TableTennis from "assets/images/homepage/table-tennis.png";
-import Padel from "assets/images/homepage/padel.png";
-import Volleyball from "assets/images/homepage/volleyball.png";
+import IndoorCricket from "assets/images/homepage/indoor-cricket.webp";
+import Football from "assets/images/homepage/football.webp";
+import Badminton from "assets/images/homepage/badminton.webp";
+import TableTennis from "assets/images/homepage/table-tennis.webp";
+import Padel from "assets/images/homepage/padel.webp";
+import Volleyball from "assets/images/homepage/volleyball.webp";
 
 const Sports = () => {
   const isMobile = window.innerWidth < 768;

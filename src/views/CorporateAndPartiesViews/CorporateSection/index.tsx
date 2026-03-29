@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import Corporate1 from "assets/images/corporate-and-parties/corporate-1.png";
+import Corporate1 from "assets/images/corporate-and-parties/corporate-1.webp";
 
 const CorporateSection = () => {
   return (

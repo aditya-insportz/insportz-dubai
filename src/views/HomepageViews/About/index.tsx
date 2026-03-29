@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import ImageLg from "assets/images/homepage/about-lg.png";
-import ImageSm from "assets/images/homepage/about-sm.png";
+import ImageLg from "assets/images/homepage/about-lg.webp";
+import ImageSm from "assets/images/homepage/about-sm.webp";
 import styles from "./style.module.scss";
 import InfoBox from "components/InfoBox";
-import FacilitySm from "assets/images/homepage/facility-sm.png";
-import FacilityLg from "assets/images/homepage/facility-lg.png";
+import FacilitySm from "assets/images/homepage/facility-sm.webp";
+import FacilityLg from "assets/images/homepage/facility-lg.webp";
 
 const FACILITIES_DATA = {
   title: "Facility Features:",

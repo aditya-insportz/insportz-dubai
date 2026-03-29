@@ -1,5 +1,5 @@
 import DarkButton from "@/components/Buttons/DarkButton";
-import DubaiImage from "@/assets/images/indoor-cricket/indoor-cricket-dubai-1.png";
+import DubaiImage from "@/assets/images/indoor-cricket/indoor-cricket-dubai-1.webp";
 import styles from "./style.module.scss";
 import { BOOK_NOW_LINK } from "@/utils/constants";
 

@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import Training1 from "assets/images/training-and-coaching/training-1.png";
+import Training1 from "assets/images/training-and-coaching/training-1.webp";
 
 const TrainingSection = () => {
   return (

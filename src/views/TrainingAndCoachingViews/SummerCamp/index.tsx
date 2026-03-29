@@ -1,5 +1,5 @@
 import InfoBox from "@/components/InfoBox";
-import SummerCampImg from "assets/images/training-and-coaching/summer-camp.png";
+import SummerCampImg from "assets/images/training-and-coaching/summer-camp.webp";
 import styles from "./style.module.scss";
 import { WHATSAPP_LINK } from "@/utils/constants";
 
