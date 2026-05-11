@@ -36,23 +36,6 @@ const Head = ({ metadata }: any) => {
       <meta name="twitter:creator" content={metadata.author} />
       <meta name="twitter:image" content={shareImage} />
       <meta name="twitter:card" content="summary_large_image" />
-
-      {/* <------------------ hreflangs  -----------------> */}
-      <link
-        rel="alternate"
-        hrefLang="en-IN"
-        href={`https://insportzclub.com/en${path}`}
-      />
-      <link
-        rel="alternate"
-        hrefLang="hi-IN"
-        href={`https://insportzclub.com/hi${path}`}
-      />
-      <link
-        rel="alternate"
-        hrefLang="x-default"
-        href={`https://insportzclub.com${path}`}
-      />
     </Helmet>
   );
 };
